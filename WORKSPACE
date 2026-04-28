@@ -191,8 +191,8 @@ http_archive(
 #### Will be used on feature release
 git_repository(
     name = "mediapipe",
-    remote = "https://github.com/Vishwa2684/mediapipe.git",
-    branch = "object_tracking_flow_ovms",
+    remote = "https://github.com/Vishwa2684/mediapipe_ovms.git",
+    # branch = "object_tracking_flow_ovms",
     commit = "6593446eae0d1fcb7d32138b4f845ef8258ffa37", # top of mediapipe main branch as of 26.11.2025
 )
 
