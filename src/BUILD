@@ -820,7 +820,23 @@ ovms_cc_library(
                     "@windows_opencl//:opencl",
                     "@windows_opencl2//:opencl2",
                     ],
-                }),
+                })
+            + select({
+            "//conditions:default": [
+                "@mediapipe_calculators//:mediapipe_calculators", # Need this dependencies here because we use ovms/src - cannot add in ovms_dependencies because we copy src directory later in Dockerfile
+                "@mediapipe//mediapipe/graphs/holistic_tracking:holistic_tracking_to_render_data",
+                "@mediapipe//mediapipe/graphs/iris_tracking:iris_tracking_cpu_deps",
+                "@mediapipe//mediapipe/calculators/tensor:image_to_tensor_calculator",
+                "@mediapipe//mediapipe/graphs/tracking:ovms_calculators",
+                "@mediapipe//mediapipe/modules/holistic_landmark:holistic_landmark_cpu",
+                "libovmsmediapipe_utils",
+                "@mediapipe//mediapipe/calculators/geti/inference:inference_calculators",
+                "@mediapipe//mediapipe/calculators/geti/utils:utils",
+                "@mediapipe//mediapipe/calculators/geti/utils:emptylabel_calculators",
+                "@mediapipe//mediapipe/calculators/geti/serialization:calculators",
+            ],
+            "//:disable_mediapipe" : [],
+        }),
     visibility = ["//visibility:public",],
     additional_copts = COPTS_PYTHON + COPTS_MEDIAPIPE + COPTS_DROGON + COPTS_OV_TRACE,
     additional_linkopts = select({
