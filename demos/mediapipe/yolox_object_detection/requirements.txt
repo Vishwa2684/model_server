@@ -1,0 +1,31 @@
+# protobuf==5.29.6
+# tritonclient[all]
+# requests==2.33.0
+# grpcio
+# opencv-python>=4.8.1.78
+# numpy<2.0.0
+# onnx2tf==1.28.8
+# tensorflow==2.19.0
+# tf-keras==2.19.0
+# onnx==1.17.0
+# onnx-graphsurgeon==0.5.8
+psutil
+protobuf==5.29.6
+tritonclient[all]
+requests==2.33.0
+grpcio
+opencv-python>=4.8.1.78
+numpy==1.26.4
+
+tensorflow==2.19.0
+tf-keras==2.19.0
+
+onnx==1.17.0
+onnxruntime==1.20.1
+onnxsim==0.4.36
+onnx-graphsurgeon==0.5.8
+sng4onnx==1.0.4
+sne4onnx==1.0.13
+
+ai-edge-litert==2.1.6
+onnx2tf==1.28.8
