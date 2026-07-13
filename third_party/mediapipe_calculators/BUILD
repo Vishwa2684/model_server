@@ -98,7 +98,7 @@ cc_library(
         #REQUIRED_easyexif_DEPENDENCY"@mediapipe//mediapipe/calculators/image:image_file_properties_calculator",
         "@mediapipe//mediapipe/calculators/image:segmentation_smoothing_calculator",
         "@mediapipe//mediapipe/calculators/image:warp_affine_calculator",
-        #REQUIRED_libyuv_DEPENDENCY"@mediapipe//mediapipe/calculators/image:yuv_to_image_calculator",
+        # REQUIRED_libyuv_DEPENDENCY"@mediapipe//mediapipe/calculators/image:yuv_to_image_calculator",
         #VISIBILITY_PRIVATE_THUS_SINK_BELOW"@mediapipe//mediapipe/calculators/internal:callback_packet_calculator",
         "@mediapipe//mediapipe/framework/tool:sink",
         "@mediapipe//mediapipe/calculators/video:flow_to_image_calculator",
@@ -108,6 +108,9 @@ cc_library(
         "@mediapipe//mediapipe/calculators/video:box_detector_calculator",
         "@mediapipe//mediapipe/calculators/video:tracked_detection_manager_calculator",
         "@mediapipe//mediapipe/calculators/video:video_pre_stream_calculator",
+
+        #BYTETRACK CALCULATORS
+        "@mediapipe//mediapipe/graphs/bytetrack/calculators:bytetrack_calculators",
     ]  + select({
         "//conditions:default": [
             "@mediapipe//mediapipe/calculators/core:packet_cloner_calculator", # TODO windows: stdc++20 required

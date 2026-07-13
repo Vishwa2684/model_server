@@ -741,7 +741,6 @@ ovms_cc_library(
                 "@mediapipe//mediapipe/graphs/iris_tracking:iris_tracking_cpu_deps",
                 "@mediapipe//mediapipe/calculators/tensor:image_to_tensor_calculator",
                 "@mediapipe//mediapipe/modules/holistic_landmark:holistic_landmark_cpu",
-                "@mediapipe//mediapipe/graphs/bytetrack/calculators:bytetrack_calculators",
                 "@mediapipe//mediapipe/calculators/geti/inference:inference_calculators",
                 "@mediapipe//mediapipe/calculators/geti/utils:utils",
                 "@mediapipe//mediapipe/calculators/geti/utils:emptylabel_calculators",
